@@ -5,10 +5,11 @@
   import { afterUpdate } from 'svelte';
   import { pageTitle } from '$lib/store';
   import '$lib/checkered.css';
+  import { base } from '$app/paths';
 
   let backButtonVisible = false
   afterUpdate(() => {
-    backButtonVisible = location.pathname !== '/'
+    backButtonVisible = location.pathname !== `${base}/`
   })
 </script>
 

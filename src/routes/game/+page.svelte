@@ -5,8 +5,12 @@
 	import { games, pageTitle } from '$lib/store';
 	import { page } from '$app/stores';
 	import kimblelogo from '$lib/assets/kimble.svg'
+	import { onMount } from 'svelte';
 
-	const gameId = $page.url.searchParams.get('id') || '';
+	let gameId: string;
+	onMount(() => {
+		gameId = $page.url.searchParams.get('id') || '';
+	})
 	let game = new Game();
 	
 	$: game = $games[gameId];

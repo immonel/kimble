@@ -1,7 +1,8 @@
 <script lang="ts">
-    import { deleteAllGames, pageTitle } from "$lib/store";
-    
-    $pageTitle = "Settings";
+  import { base } from "$app/paths";
+  import { deleteAllGames, pageTitle } from "$lib/store";
+
+  $pageTitle = "Settings";
 </script>
 
 <div class="flex flex-col gap-3 mt-20">
@@ -14,7 +15,7 @@
   >
     Delete all games
   </button>
-  <a href="/" class="
+  <a href="{base}/" class="
     p-3 rounded-xl w-60
     bg-gray-200 dark:bg-gray-800
   ">

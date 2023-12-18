@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { games, pageTitle } from "$lib/store";
   import _ from 'lodash';
 
@@ -18,7 +19,7 @@
         bg-gray-200 dark:bg-gray-800 divide-slate-300 dark:divide-slate-700 dark:shadow-black
       ">
         {#each games as game}
-          <a href={`/game?id=${game.id}`}>
+          <a href={`${base}/game?id=${game.id}`}>
             <li class="p-4 truncate">
               {game.name}
             </li>

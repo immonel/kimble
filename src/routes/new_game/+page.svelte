@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { Game } from '$lib/game'
   import { addGame, pageTitle } from '$lib/store';
   import { Color } from '$types';
@@ -25,7 +26,7 @@
     if (fields.red)    game.teams[RED].name    = fields.red
 
     addGame(game);
-    goto(`/game?id=${game.id}`)
+    goto(`${base}/game?id=${game.id}`)
   }
 </script>
 
