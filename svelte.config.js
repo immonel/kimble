@@ -25,6 +25,9 @@ const config = {
 			'$components/*': './src/components/*',
 			'$types': 		 	 './src/types',
 			'$types/*': 		 './src/types/*'
+		},
+		paths: {
+			base: '/kimble'
 		}
 	}
 };
