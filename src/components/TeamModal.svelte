@@ -48,7 +48,8 @@
                 <div>
                   <button
                     on:click={addPoint}
-                    class="drop-shadow-md p-4 rounded-xl w-2/5 {colorMap[team.color].bgPrimary}"
+                    disabled={!(penaltyLeft > 0)}
+                    class="drop-shadow-md p-4 rounded-xl w-2/5 {colorMap[team.color].bgPrimary} disabled:opacity-50"
                   >
                     <i class="bi-dash-lg" />
                     Remove penalty
