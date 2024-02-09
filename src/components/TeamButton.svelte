@@ -26,7 +26,7 @@
       <p>{'👑'.repeat(Math.min(team.raises, maxRaiseIcons))}</p>
     </div>
     <div class="self-center text-2xl ml-4">
-      {penaltyLeft}
+      {penaltyLeft} / {team.penalty}
     </div>
   </button>
 {:else}
