@@ -85,7 +85,6 @@
       bg-gray-200 dark:bg-gray-800
     "
   >
-    <i class="bi-arrow-right" />
     Create game
   </button>
 </div>
