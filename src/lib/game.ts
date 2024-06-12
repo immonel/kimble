@@ -27,7 +27,9 @@ export class Game {
 
   constructor() {
     const timestamp = Date.now()
-    this.name = timestamp.toString()
+    const date = new Date(timestamp)
+    const datetimeString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`
+    this.name = datetimeString
     this.id = timestamp
   }
 }
