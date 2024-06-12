@@ -28,9 +28,7 @@
         <div class="relative rounded-lg shadow">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 rounded-t-xl {colorMap[team.color].bgPrimary}">
-                <h3 class="text-xl font-semibold truncate">
-                    {team.name}
-                </h3>
+                <input bind:value={team.name} placeholder="Team name" class="bg-transparent text-xl font-semibold truncate" />
                 <button type="button" on:click={hideModal} class="rounded-lg text-sm ml-6 w-8 h-8 ms-auto inline-flex justify-center items-center">
                     <i class="bi-x-lg">
                     <span class="sr-only">Close modal</span>
