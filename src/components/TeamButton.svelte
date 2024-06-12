@@ -7,7 +7,7 @@
   let modalVisible = false;
   const showModal = () => modalVisible = true;
 
-  const maxRaiseIcons = 5;
+  const maxRaiseIcons = 6;
 
   $: penaltyLeft = team.penalty - team.points;
 </script>
@@ -18,15 +18,17 @@
     class="
       {colorMap[team.color].class}
       hover:{colorMap[team.color].hoverClass}
-      p-3 w-full h-20 rounded-xl flex justify-between
+      p-3 w-full h-20 rounded-xl
     "
   >
-    <div class="flex flex-col text-start truncate">
+    <div class="text-start">
       <p class="truncate">{team.name}</p>
-      <p>{'👑'.repeat(Math.min(team.raises, maxRaiseIcons))}</p>
     </div>
-    <div class="self-center text-2xl ml-4">
-      {penaltyLeft} / {team.penalty}
+    <div class="flex justify-between">
+      <div class="flex items-center text-start">
+        <p class="text-sm">{'👑'.repeat(Math.min(team.raises, maxRaiseIcons))}</p>
+      </div>
+      <p class="text-2xl min-w-fit">{penaltyLeft} / {team.penalty}</p>
     </div>
   </button>
 {:else}
